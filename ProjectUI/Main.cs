@@ -1,4 +1,5 @@
 ﻿using ProjectBL.Controller;
+using ProjectBL.Model;
 using ProjectUI.Forms;
 using System;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace ProjectUI
             db = new ProjectContext();
         }
 
-        private void IncomeToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void AddIncomeReportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var form = new IncomeForm();
             if (form.ShowDialog() == DialogResult.OK)
@@ -24,7 +25,7 @@ namespace ProjectUI
             }
         }
 
-        private void ExpenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void AddExpenseReportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var form = new ExpenseForm();
             if (form.ShowDialog() == DialogResult.OK)
@@ -32,6 +33,18 @@ namespace ProjectUI
                 db.Expenses.Add(form.Expense);
                 db.SaveChanges();
             }
+        }
+
+        private void ShowIncomeStatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var incomeCatalog = new Catalog<Income>(db.Incomes);
+            incomeCatalog.Show();
+        }
+
+        private void расходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var expenseCatalog = new Catalog<Expense>(db.Expenses);
+            expenseCatalog.Show();
         }
     }
 }

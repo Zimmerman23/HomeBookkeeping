@@ -45,7 +45,7 @@
             this.менюToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(439, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,14 +72,14 @@
             this.incomeToolStripMenuItem1.Name = "incomeToolStripMenuItem1";
             this.incomeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.incomeToolStripMenuItem1.Text = "Доход";
-            this.incomeToolStripMenuItem1.Click += new System.EventHandler(this.IncomeToolStripMenuItem1_Click);
+            this.incomeToolStripMenuItem1.Click += new System.EventHandler(this.AddIncomeReportToolStripMenuItem1_Click);
             // 
             // расходToolStripMenuItem1
             // 
             this.расходToolStripMenuItem1.Name = "расходToolStripMenuItem1";
             this.расходToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.расходToolStripMenuItem1.Text = "Расход";
-            this.расходToolStripMenuItem1.Click += new System.EventHandler(this.ExpenseToolStripMenuItem1_Click);
+            this.расходToolStripMenuItem1.Click += new System.EventHandler(this.AddExpenseReportToolStripMenuItem1_Click);
             // 
             // показатьСтатистикуToolStripMenuItem
             // 
@@ -95,18 +95,20 @@
             this.доходToolStripMenuItem.Name = "доходToolStripMenuItem";
             this.доходToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.доходToolStripMenuItem.Text = "Доход";
+            this.доходToolStripMenuItem.Click += new System.EventHandler(this.ShowIncomeStatToolStripMenuItem_Click);
             // 
             // расходToolStripMenuItem
             // 
             this.расходToolStripMenuItem.Name = "расходToolStripMenuItem";
-            this.расходToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.расходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.расходToolStripMenuItem.Text = "Расход";
+            this.расходToolStripMenuItem.Click += new System.EventHandler(this.расходToolStripMenuItem_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(439, 231);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Main";
             this.Text = "Main";
