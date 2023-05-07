@@ -12,5 +12,6 @@ namespace ProjectBL.Controller
         //    base.OnModelCreating(modelBuilder);
         //}
         public DbSet<Income> Incomes { get; set; }
+        public DbSet<Expense> Expenses { get; set; }
     }
 }

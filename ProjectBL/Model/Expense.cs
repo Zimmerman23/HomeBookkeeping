@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Permissions;
 
 namespace ProjectBL.Model
 {
@@ -27,6 +26,48 @@ namespace ProjectBL.Model
         [Column("other")]
         public double Other { get; set; }
         public Expense() { }
-
+        public Expense(int id, DateTime date, double food, double transport, double mobileConnection, double internet, double entertainment, double other)
+        {
+            if (id < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(id));
+            }
+            if (date > DateTime.Today || date < DateTime.Parse("01.01.1900"))
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(date));
+            }
+            if (food < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(food));
+            }
+            if (transport < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(transport));
+            }
+            if (mobileConnection < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(mobileConnection));
+            }
+            if (internet < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(internet));
+            }
+            if (entertainment < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(entertainment));
+            }
+            if (other < 0)
+            {
+                throw new ArgumentException("Data is incorrect.", nameof(other));
+            }
+            Id = id;
+            Date = date;
+            Food = food;
+            Transport = transport;
+            MobileConnection = mobileConnection;
+            Internet = internet;
+            Entertainment = entertainment;
+            Other = other;
+        }
     }
 }

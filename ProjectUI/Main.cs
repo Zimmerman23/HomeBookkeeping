@@ -23,5 +23,15 @@ namespace ProjectUI
                 db.SaveChanges();
             }
         }
+
+        private void ExpenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new ExpenseForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                db.Expenses.Add(form.Expense);
+                db.SaveChanges();
+            }
+        }
     }
 }

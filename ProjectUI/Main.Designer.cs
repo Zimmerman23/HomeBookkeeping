@@ -79,6 +79,7 @@
             this.расходToolStripMenuItem1.Name = "расходToolStripMenuItem1";
             this.расходToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.расходToolStripMenuItem1.Text = "Расход";
+            this.расходToolStripMenuItem1.Click += new System.EventHandler(this.ExpenseToolStripMenuItem1_Click);
             // 
             // показатьСтатистикуToolStripMenuItem
             // 
