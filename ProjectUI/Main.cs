@@ -41,7 +41,7 @@ namespace ProjectUI
             incomeCatalog.Show();
         }
 
-        private void расходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowExpenseStatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var expenseCatalog = new Catalog<Expense>(db.Expenses);
             expenseCatalog.Show();
